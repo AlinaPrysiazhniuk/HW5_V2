@@ -44,7 +44,7 @@ const MovieDetails = () => {
           }
           alt=""
         />
-        <p>User Score: {vote_average}</p>
+        <p>User Score: {vote_average * 10}%</p>
         <h2>Overview</h2>
         <p>{overview}</p>
         {genres && (

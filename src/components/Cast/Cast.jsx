@@ -1,6 +1,7 @@
 import { getCastsDetails } from 'components/Api';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import noImage from '../../no-image.jpeg';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -24,16 +25,14 @@ const Cast = () => {
             <li key={id}>
               <img
                 src={
-                  profile_path ? (
-                    `https://image.tmdb.org/t/p/w200/${profile_path}`
-                  ) : (
-                    <div>noPhoto</div>
-                  )
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/w200/${profile_path}`
+                    : noImage
                 }
-                alt=""
+                alt={name}
               />
               <p>{name}</p>
-              <p>{character}</p>
+              <p>Character: {character}</p>
             </li>
           ))}
         </ul>
