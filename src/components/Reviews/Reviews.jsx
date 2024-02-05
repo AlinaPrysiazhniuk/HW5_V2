@@ -19,7 +19,7 @@ const Reviews = () => {
 
   return (
     <>
-      {review && (
+      {review.length > 0 ? (
         <ul>
           {review.map(({ id, author, content }) => (
             <li key={id}>
@@ -28,6 +28,8 @@ const Reviews = () => {
             </li>
           ))}
         </ul>
+      ) : (
+        <p>We dont have any reviews</p>
       )}
     </>
   );
