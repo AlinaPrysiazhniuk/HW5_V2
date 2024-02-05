@@ -61,6 +61,7 @@ const MovieDetails = () => {
         )}
 
         <Link to="cast">Casts</Link>
+        <Link to="reviews">Reviews</Link>
         <Outlet />
       </>
     </section>
