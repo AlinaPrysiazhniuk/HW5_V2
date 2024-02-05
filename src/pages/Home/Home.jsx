@@ -13,9 +13,11 @@ const Home = () => {
   useEffect(() => {
     getTrendingMovies()
       .then(({ data }) => setMovies(data.results))
-      .catch(error =>
-        alert('woops, something went wromg... Please, try agin later.')
-      );
+      .catch(error => {
+        throw new Error(
+          'woops, something went wromg... Please, try agin later.'
+        );
+      });
   }, []);
 
   return (
