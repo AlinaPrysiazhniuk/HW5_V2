@@ -10,3 +10,7 @@ export const getTrendingMovies = () => {
 export const getMovieDetails = movieId => {
   return axios.get(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
 };
+
+export const getCastsDetails = movieId => {
+  return axios.get(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`);
+};
