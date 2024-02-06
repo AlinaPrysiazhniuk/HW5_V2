@@ -1,6 +1,7 @@
 import { getMovieDetails } from 'components/Api';
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
+import noImage from '../../no-image.jpeg';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
@@ -33,11 +34,9 @@ const MovieDetails = () => {
 
         <img
           src={
-            poster_path ? (
-              `https://image.tmdb.org/t/p/w200/${poster_path}`
-            ) : (
-              <div>noPhoto</div>
-            )
+            poster_path
+              ? `https://image.tmdb.org/t/p/w200/${poster_path}`
+              : noImage
           }
           alt=""
         />
