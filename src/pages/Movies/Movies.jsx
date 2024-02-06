@@ -4,6 +4,7 @@ import { getSearchMovie } from 'components/Api';
 import SearchBar from 'components/SearchBar/SearchBar';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import noImage from '../../no-image.jpeg';
 
 const Movie = () => {
   //const location = useLocation();
@@ -39,9 +40,17 @@ const Movie = () => {
       {movies && (
         <>
           <ul>
-            {movies.map(({ id, title }) => (
+            {movies.map(({ id, poster_path, title }) => (
               <li key={id}>
                 <Link to={`/movies/${id}`} state={{ from: location }}>
+                  <img
+                    src={
+                      poster_path
+                        ? `https://image.tmdb.org/t/p/w200/${poster_path}`
+                        : noImage
+                    }
+                    alt={title}
+                  />
                   <p>{title}</p>
                 </Link>
               </li>

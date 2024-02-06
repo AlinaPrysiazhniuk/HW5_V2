@@ -1,14 +1,9 @@
 import { getTrendingMovies } from 'components/Api';
 import { useState, useEffect } from 'react';
-//import BASE_IMG_URL from 'components/Api';
-//import { useLocation } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-
-  //const url = useLocation();
 
   useEffect(() => {
     getTrendingMovies()
