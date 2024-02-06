@@ -18,3 +18,9 @@ export const getCastsDetails = movieId => {
 export const getReviewsDetails = movieId => {
   return axios.get(`${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`);
 };
+
+export const getSearchMovie = query => {
+  return axios.get(
+    `${BASE_URL}/search/movie/?api_key=${API_KEY}&query=${query}`
+  );
+};
