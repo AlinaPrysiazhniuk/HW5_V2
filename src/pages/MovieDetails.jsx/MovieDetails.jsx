@@ -38,7 +38,7 @@ const MovieDetails = () => {
               ? `https://image.tmdb.org/t/p/w200/${poster_path}`
               : noImage
           }
-          alt=""
+          alt={title}
         />
         <p>User Score: {vote_average * 10}%</p>
         <h2>Overview</h2>
