@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { useState } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
   const [movie, setMovie] = useState('');
 
   const handleChangeQuery = e => {
@@ -15,13 +15,9 @@ const SearchBar = () => {
       return alert('Enter data for search');
     }
 
-    onSubmit(movie);
+    onSearch(movie);
     setMovie('');
     console.log(movie);
-  };
-
-  const onSubmit = e => {
-    setMovie(movie);
   };
 
   return (
