@@ -10,7 +10,7 @@ const MovieDetails = () => {
   const { movieId } = useParams();
 
   const location = useLocation();
-  const backLink = location.state?.from ?? '/';
+  const backLink = location?.state?.from ?? '/';
 
   //const backLinkLocationRef = useRef(location.state?.from ?? '/movies');
 
