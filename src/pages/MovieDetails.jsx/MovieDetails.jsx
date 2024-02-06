@@ -55,9 +55,16 @@ const MovieDetails = () => {
             </ul>
           </>
         )}
+        <section>
+          <h3>Additional information</h3>
+          <Link to="cast" state={{ from: location?.state?.from }}>
+            Casts
+          </Link>
+          <Link to="reviews" state={{ from: location?.state?.from }}>
+            Reviews
+          </Link>
+        </section>
 
-        <Link to="cast">Casts</Link>
-        <Link to="reviews">Reviews</Link>
         <Outlet />
       </>
     </section>
