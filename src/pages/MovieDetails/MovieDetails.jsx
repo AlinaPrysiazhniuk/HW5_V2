@@ -63,15 +63,23 @@ const MovieDetails = () => {
         </div>
       </div>
       <div className={css.container_additional}>
-        <h3>Additional information</h3>
-        <ul>
+        <h3 className={css.movieAdditional}>Additional information</h3>
+        <ul className={css.listAdditional}>
           <li>
-            <Link to="cast" state={{ from: location?.state?.from }}>
+            <Link
+              to="cast"
+              state={{ from: location?.state?.from }}
+              className={css.itemAdditional}
+            >
               Casts
             </Link>
           </li>
           <li>
-            <Link to="reviews" state={{ from: location?.state?.from }}>
+            <Link
+              to="reviews"
+              state={{ from: location?.state?.from }}
+              className={css.itemAdditional}
+            >
               Reviews
             </Link>
           </li>
