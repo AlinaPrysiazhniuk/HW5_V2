@@ -32,8 +32,6 @@
   font-weight: 400;
 }
 
-.span {
-  text-decoration: none;
-  color: black;
-  text-align: center;
+.text {
+  font-size: 18px;
 }

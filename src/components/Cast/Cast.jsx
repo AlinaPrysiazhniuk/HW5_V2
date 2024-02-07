@@ -39,7 +39,7 @@ const Cast = () => {
           ))}
         </ul>
       ) : (
-        <p>No information about casts</p>
+        <p className={css.text}>No information about casts</p>
       )}
     </section>
   );
