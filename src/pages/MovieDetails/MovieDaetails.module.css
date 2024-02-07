@@ -13,14 +13,14 @@
   display: flex;
   gap: 30px;
   padding-bottom: 40px;
-  border-bottom: 2px solid rgb(166, 110, 110);
+  border-bottom: 2px solid rgb(245, 241, 241);
 }
 
 .container_additional {
   padding: 20px 0;
   margin: 0 auto;
 
-  border-bottom: 2px solid rgb(166, 110, 110);
+  border-bottom: 2px solid rgb(245, 241, 241);
 }
 
 .img {
@@ -79,5 +79,5 @@
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  color: rgb(183, 71, 71);
+  color: rgb(83, 79, 79);
 }
