@@ -3,10 +3,6 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import css from './SharedLayout.module.css';
 
-let activeClassName = {
-  color: '#2196f3',
-};
-
 export const SharedLayout = () => {
   return (
     <section>
