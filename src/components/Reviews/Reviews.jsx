@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const Reviews = () => {
-  //author
   const { movieId } = useParams();
   const [review, setReview] = useState([]);
 

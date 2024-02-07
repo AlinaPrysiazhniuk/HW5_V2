@@ -5,6 +5,8 @@ import SearchBar from 'components/SearchBar/SearchBar';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import noImage from '../../no-image.jpeg';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
@@ -19,6 +21,10 @@ const Movie = () => {
     }
     getSearchMovie(searchQuery)
       .then(({ data }) => {
+        if (data.results.length === 0) {
+          toast.error(`There are no movies on your request "${searchQuery}"`);
+          setMovies([]);
+        }
         setMovies(data.results);
       })
       .catch(error => {
