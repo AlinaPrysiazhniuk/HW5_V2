@@ -17,7 +17,6 @@ const SearchBar = ({ onSearch }) => {
 
     onSearch(movie);
     setMovie('');
-    console.log(movie);
   };
 
   return (
