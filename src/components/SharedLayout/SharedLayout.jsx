@@ -7,12 +7,14 @@ export const SharedLayout = () => {
   return (
     <section>
       <header className={css.header}>
-        <Link to="/" className={css.link_header}>
-          Home
-        </Link>
-        <Link to="/movies" className={css.link_header}>
-          Movies
-        </Link>
+        <div className={css.container}>
+          <Link to="/" className={css.link_header}>
+            Home
+          </Link>
+          <Link to="/movies" className={css.link_header}>
+            Movies
+          </Link>
+        </div>
       </header>
       <Suspense fallback={<div>Loading page...</div>}>
         <Outlet />
