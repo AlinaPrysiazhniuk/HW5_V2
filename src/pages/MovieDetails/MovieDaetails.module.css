@@ -1,6 +1,5 @@
 .movie {
   background-color: rgb(202, 208, 212);
-
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 100px;
@@ -13,13 +12,15 @@
   margin: -30px auto 0 auto;
   display: flex;
   gap: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid rgb(166, 110, 110);
 }
 
 .container_additional {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 20px 0;
   margin: 0 auto;
+
+  border-bottom: 2px solid rgb(166, 110, 110);
 }
 
 .img {
@@ -38,7 +39,7 @@
   border: 0;
   border-radius: 4px;
   color: white;
-  background-color: rgb(164, 126, 137);
+  background-color: rgb(118, 112, 113);
   text-decoration: none;
 }
 

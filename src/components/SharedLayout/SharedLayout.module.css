@@ -1,7 +1,6 @@
 .container_header {
   padding-left: 40px;
   padding-right: 40px;
-
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -9,6 +8,7 @@
   justify-content: center;
   min-height: 80px;
   gap: 40px;
+  border-bottom: 2px solid rgb(166, 110, 110);
 }
 
 .link_header {
