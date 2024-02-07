@@ -17,9 +17,9 @@ const Home = () => {
   }, []);
 
   return (
-    <section>
+    <section className={css.section_home}>
       {movies && (
-        <div className={css.container}>
+        <div className={css.container_home}>
           <h2 className={css.title}>Trending today</h2>
 
           <ul className={css.list}>

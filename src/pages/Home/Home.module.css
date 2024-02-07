@@ -1,12 +1,20 @@
-.container {
+.section_home {
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  background-color: rgb(202, 208, 212);
+}
+
+.container_home {
   padding-left: 40px;
   padding-right: 40px;
-  /* width: 100%; */
+
   margin: 0 auto;
 }
 
 .title {
-  padding: 30px 0;
+  font-size: 28px;
+  padding-bottom: 30px;
   line-height: 1.15;
   text-transform: uppercase;
   text-align: center;
@@ -20,6 +28,7 @@
 }
 
 .item {
+  background-color: aliceblue;
   border: 1px solid rgb(149, 143, 143);
   border-radius: 5px;
   width: 260px;

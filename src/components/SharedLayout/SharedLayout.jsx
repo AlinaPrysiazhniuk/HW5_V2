@@ -6,8 +6,8 @@ import css from './SharedLayout.module.css';
 export const SharedLayout = () => {
   return (
     <section>
-      <header className={css.header}>
-        <div className={css.container}>
+      <header>
+        <div className={css.container_header}>
           <Link to="/" className={css.link_header}>
             Home
           </Link>
