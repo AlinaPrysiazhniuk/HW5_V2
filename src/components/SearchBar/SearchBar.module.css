@@ -1,0 +1,35 @@
+.search_form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.container_form {
+  padding-bottom: 30px;
+  padding-top: -10px;
+  margin: auto;
+}
+
+.input {
+  width: 250px;
+  height: 25px;
+  border: 1px solid rgb(222, 125, 125);
+}
+
+.search_button {
+  background-color: rgb(166, 110, 110);
+  border: 1px solid rgb(222, 125, 125);
+  border-radius: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: aliceblue;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 5px;
+  color: rgb(166, 110, 110);
+  font-weight: 600;
+  font-size: 20px;
+}

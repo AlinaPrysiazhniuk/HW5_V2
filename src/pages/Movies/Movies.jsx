@@ -39,9 +39,7 @@ const Movie = () => {
 
   return (
     <section className={css.section_movies}>
-      <div>Movies List</div>
       <SearchBar onSearch={onSubmit} />
-
       <div className={css.container_movie}>
         {movies && (
           <>
