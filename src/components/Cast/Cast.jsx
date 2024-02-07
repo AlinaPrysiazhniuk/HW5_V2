@@ -19,7 +19,7 @@ const Cast = () => {
 
   return (
     <>
-      {cast && (
+      {cast.length > 0 ? (
         <ul>
           {cast.map(({ id, name, profile_path, character }) => (
             <li key={id}>
@@ -36,6 +36,8 @@ const Cast = () => {
             </li>
           ))}
         </ul>
+      ) : (
+        <p>No information about casts</p>
       )}
     </>
   );
