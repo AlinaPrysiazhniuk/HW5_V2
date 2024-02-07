@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(101, 100, 100);
+  justify-content: center;
+  min-height: 80px;
+  gap: 40px;
+}
+
+.link_header {
+  font-family: 'Bungee', sans-serif;
+  text-decoration: none;
+  font-size: 36px;
+  color: rgb(217, 209, 209);
+  font-weight: 500;
+  letter-spacing: -1px;
+  transition-duration: 600ms;
+}
+
+.link_header:hover {
+  color: rgb(229, 38, 38);
+  transform: scale(1.3);
+}

@@ -1,6 +1,7 @@
 import { getTrendingMovies } from 'components/Api';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import css from './Home.module.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -18,14 +19,15 @@ const Home = () => {
   return (
     <section>
       {movies && (
-        <>
-          <h2>Trending today</h2>
+        <div className={css.container}>
+          <h2 className={css.title}>Trending today</h2>
 
-          <ul>
+          <ul className={css.list}>
             {movies.map(({ id, poster_path, title }) => (
-              <li key={id}>
-                <Link to={`movies/${id}`}>
+              <li key={id} className={css.item}>
+                <Link to={`movies/${id}`} className={css.link}>
                   <img
+                    className={css.img}
                     src={
                       poster_path ? (
                         `https://image.tmdb.org/t/p/w200/${poster_path}`
@@ -35,12 +37,12 @@ const Home = () => {
                     }
                     alt={title}
                   />
-                  <p>{title}</p>
+                  <p className={css.text}>{title}</p>
                 </Link>
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </section>
   );
