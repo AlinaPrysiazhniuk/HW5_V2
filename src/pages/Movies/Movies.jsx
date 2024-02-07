@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import noImage from '../../no-image.jpeg';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import css from './Movie.module.css';
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
@@ -37,32 +38,39 @@ const Movie = () => {
   };
 
   return (
-    <>
+    <section className={css.section_movies}>
       <div>Movies List</div>
       <SearchBar onSearch={onSubmit} />
 
-      {movies && (
-        <>
-          <ul>
-            {movies.map(({ id, poster_path, title }) => (
-              <li key={id}>
-                <Link to={`/movies/${id}`} state={{ from: location }}>
-                  <img
-                    src={
-                      poster_path
-                        ? `https://image.tmdb.org/t/p/w200/${poster_path}`
-                        : noImage
-                    }
-                    alt={title}
-                  />
-                  <p>{title}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </>
+      <div className={css.container_movie}>
+        {movies && (
+          <>
+            <ul className={css.list}>
+              {movies.map(({ id, poster_path, title }) => (
+                <li key={id} className={css.item}>
+                  <Link
+                    to={`/movies/${id}`}
+                    state={{ from: location }}
+                    className={css.link}
+                  >
+                    <img
+                      className={css.img}
+                      src={
+                        poster_path
+                          ? `https://image.tmdb.org/t/p/w200/${poster_path}`
+                          : noImage
+                      }
+                      alt={title}
+                    />
+                    <p className={css.text}>{title}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 
