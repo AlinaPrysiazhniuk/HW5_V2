@@ -14,9 +14,9 @@
 .link_header {
   font-family: 'Bungee', sans-serif;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 40px;
   color: rgb(217, 209, 209);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -1px;
   transition-duration: 600ms;
 }

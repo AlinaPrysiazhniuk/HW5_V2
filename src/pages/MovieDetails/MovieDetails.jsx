@@ -2,6 +2,7 @@ import { getMovieDetails } from 'components/Api';
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import noImage from '../../no-image.jpeg';
+import css from './MovieDaetails.module.css';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
@@ -25,52 +26,59 @@ const MovieDetails = () => {
   const { title, overview, vote_average, genres, poster_path } = movie;
 
   return (
-    <section>
-      <>
-        <h1>{title}</h1>
-        <Link to={backLink}>Go back</Link>
-
+    <section className={css.movie}>
+      <Link to={backLink} className={css.goBack}>
+        Go back
+      </Link>
+      <div className={css.container_movie}>
         <img
+          className={css.img}
           src={
             poster_path
-              ? `https://image.tmdb.org/t/p/w200/${poster_path}`
+              ? `https://image.tmdb.org/t/p/w500/${poster_path}`
               : noImage
           }
           alt={title}
         />
-        <p>User Score: {Math.round(vote_average * 10)}%</p>
-        <h2>Overview</h2>
-        <p>{overview}</p>
-        {genres && (
-          <>
-            <h3>Genres</h3>
-            <ul>
-              {genres.map(({ id, name }) => (
-                <li key={id}>
-                  <p>{name}</p>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-        <section>
-          <h3>Additional information</h3>
-          <ul>
-            <li>
-              <Link to="cast" state={{ from: location?.state?.from }}>
-                Casts
-              </Link>
-            </li>
-            <li>
-              <Link to="reviews" state={{ from: location?.state?.from }}>
-                Reviews
-              </Link>
-            </li>
-          </ul>
-        </section>
 
-        <Outlet />
-      </>
+        <div className={css.movieDescription}>
+          <h1 className={css.movieTitle}>{title}</h1>
+          <p className={css.movieText}>
+            User Score: {Math.round(vote_average * 10)}%
+          </p>
+          <h2 className={css.movieOverview}>Overview</h2>
+          <p className={css.movieText}>{overview}</p>
+          {genres && (
+            <>
+              <h3 className={css.movieGenres}>Genres</h3>
+              <ul>
+                {genres.map(({ id, name }) => (
+                  <li key={id}>
+                    <p>{name}</p>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      </div>
+      <div className={css.container_additional}>
+        <h3>Additional information</h3>
+        <ul>
+          <li>
+            <Link to="cast" state={{ from: location?.state?.from }}>
+              Casts
+            </Link>
+          </li>
+          <li>
+            <Link to="reviews" state={{ from: location?.state?.from }}>
+              Reviews
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <Outlet />
     </section>
   );
 };
