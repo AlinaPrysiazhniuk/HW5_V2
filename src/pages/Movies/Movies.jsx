@@ -7,12 +7,10 @@ import { useLocation } from 'react-router-dom';
 import noImage from '../../no-image.jpeg';
 
 const Movie = () => {
-  //const location = useLocation();
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const location = useLocation();
-  console.log(location);
   const searchQuery = searchParams.get('query');
 
   useEffect(() => {
