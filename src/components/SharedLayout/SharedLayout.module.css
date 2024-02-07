@@ -25,3 +25,14 @@
   color: rgb(229, 38, 38);
   transform: scale(1.3);
 }
+
+.active {
+  font-family: 'Bungee', sans-serif;
+  text-decoration: none;
+  font-size: 40px;
+  color: rgb(217, 209, 209);
+  font-weight: 700;
+  letter-spacing: -1px;
+  transition-duration: 2000ms;
+  border-bottom: 2px solid red;
+}
