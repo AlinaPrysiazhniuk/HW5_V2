@@ -7,8 +7,8 @@
 }
 
 .container_movie {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
   margin: -30px auto 0 auto;
   display: flex;
   gap: 30px;
