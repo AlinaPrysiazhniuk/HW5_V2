@@ -11,6 +11,8 @@ const MovieDetails = () => {
   const location = useLocation();
   const backLink = location?.state?.from ?? '/';
 
+  const getYear = () => new Date(movie.release_date).getFullYear();
+
   useEffect(() => {
     getMovieDetails(movieId)
       .then(({ data }) => {
@@ -42,7 +44,10 @@ const MovieDetails = () => {
         />
 
         <div className={css.movieDescription}>
-          <h1 className={css.movieTitle}>{title}</h1>
+          <h1 className={css.movieTitle}>
+            {title}
+            <span>({getYear()})</span>
+          </h1>
           <p className={css.movieText}>
             User Score: {Math.round(vote_average * 10)}%
           </p>
