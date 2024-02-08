@@ -1,5 +1,4 @@
 .movie {
-  background-color: rgb(202, 208, 212);
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 100px;
@@ -25,7 +24,8 @@
 
 .img {
   border-radius: 10px;
-  width: 320px;
+
+  /* width: 320px; */
 }
 
 .goBack {
@@ -39,7 +39,7 @@
   border: 0;
   border-radius: 4px;
   color: white;
-  background-color: rgb(118, 112, 113);
+  background-color: rgb(179, 174, 175);
   text-decoration: none;
 }
 
@@ -79,5 +79,5 @@
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  color: rgb(83, 79, 79);
+  color: rgb(255, 255, 255);
 }

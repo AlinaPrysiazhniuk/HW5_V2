@@ -35,7 +35,7 @@ const MovieDetails = () => {
           className={css.img}
           src={
             poster_path
-              ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+              ? `https://image.tmdb.org/t/p/w200/${poster_path}`
               : noImage
           }
           alt={title}
